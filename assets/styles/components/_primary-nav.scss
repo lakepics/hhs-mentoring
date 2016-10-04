@@ -1,0 +1,36 @@
+.navbar-brand {
+    float: left;
+    padding: 15px 0px;
+
+}
+
+.navbar {
+    .nav {
+        float: right;
+        >li {
+            display: inline-block;
+            a {
+                margin-top: 25px;
+                margin-bottom: 22px;
+                padding: 10px 15px;
+                color: $dark-blue;
+                border-right: 1px solid rgb(238,238,238);
+                font-size: 13px;
+                font-family: $bold-sans-serif;
+                line-height: 150%;
+                text-transform: uppercase;
+                letter-spacing: 0.1em;
+                span {
+                    font-family: $light-sans-serif;
+                }
+            }
+            a:hover, a:active {
+                background: transparent;
+            }
+
+        }
+        .last-menu-item a {
+                border-right: none;
+            }
+    }
+}
