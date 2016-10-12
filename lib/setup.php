@@ -67,6 +67,24 @@ function widgets_init() {
   ]);
 
   register_sidebar([
+    'name'          => __('Directions', 'sage'),
+    'id'            => 'sidebar-contact-us',
+    'before_widget' => '<section class="widget %1$s %2$s">',
+    'after_widget'  => '</section>',
+    'before_title'  => '<h3>',
+    'after_title'   => '</h3>'
+  ]);
+
+register_sidebar([
+    'name'          => __('Home_Page_Sidebar', 'sage'),
+    'id'            => 'sidebar-home-page',
+    'before_widget' => '<section class="widget %1$s %2$s">',
+    'after_widget'  => '</section>',
+    'before_title'  => '<h3>',
+    'after_title'   => '</h3>'
+  ]);
+
+  register_sidebar([
     'name'          => __('Footer', 'sage'),
     'id'            => 'sidebar-footer',
     'before_widget' => '<section class="widget %1$s %2$s">',
@@ -87,7 +105,6 @@ function display_sidebar() {
     // The sidebar will NOT be displayed if ANY of the following return true.
     // @link https://codex.wordpress.org/Conditional_Tags
     is_404(),
-    is_front_page(),
     is_page_template('template-custom.php'),
   ]);
 

@@ -1,7 +1,7 @@
 <?php
-/**
- * Template Name: Custom Template
- */
+/*
+// Template Name: Front Page
+*/
 ?>
 
 <?php while (have_posts()) : the_post(); ?>

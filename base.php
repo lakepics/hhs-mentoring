@@ -15,21 +15,33 @@ use Roots\Sage\Wrapper;
       </div>
     <![endif]-->
     <?php
-      do_action('get_header');
+      /* do_action('get_header'); */
       get_template_part('templates/header');
     ?>
+    <?php if (Setup\display_sidebar()) : ?>
     <div class="wrap container" role="document">
+     <?php get_template_part('templates/page-header'); ?>
       <div class="content row">
-        <main class="main">
-          <?php include Wrapper\template_path(); ?>
+        <main class="col-md-8">
+          <?php get_template_part('templates/page', 'title');
+            include Wrapper\template_path(); ?>
         </main><!-- /.main -->
-        <?php if (Setup\display_sidebar()) : ?>
-          <aside class="sidebar">
+          <aside class="col-md-4">
             <?php include Wrapper\sidebar_path(); ?>
           </aside><!-- /.sidebar -->
-        <?php endif; ?>
       </div><!-- /.content -->
     </div><!-- /.wrap -->
+    <?php elseif (!(Setup\display_sidebar())) : ?>
+    <div class="wrap container" role="document">
+     <?php get_template_part('templates/page-header'); ?>
+      <div class="content row">
+        <main class="col-md-12">
+          <?php get_template_part('templates/page', 'title');
+            include Wrapper\template_path(); ?>
+        </main><!-- /.main -->
+      </div><!-- /.content -->
+    </div><!-- /.wrap -->
+    <?php endif; ?>
     <?php
       do_action('get_footer');
       get_template_part('templates/footer');
