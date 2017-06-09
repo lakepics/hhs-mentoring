@@ -1,0 +1,202 @@
+.banner {
+    margin-bottom: 0;
+
+    .container {
+    background-image: url('../images/header-background.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: left top;
+    padding-right: 0;
+    min-height: 180px;
+
+    }
+}
+.navbar-brand {
+    height: 45px;
+}
+.navbar-default {
+    background-color: transparent;
+    border-color: transparent;
+    .navbar-nav {
+        float: right;
+        margin-top: -45px;
+        margin-right: 1px;
+        width: 100%;
+        height: 45px;
+        > li > a {
+            padding-top: 3px;
+            padding-bottom: 0;
+            color: #FFFFFF;
+            line-height: 42px;
+            &:hover, &:focus {
+                color: $dark-blue;
+                background-color: $ucla-gold;
+            }
+        }
+        > .active > a {
+          &, &:hover, &:focus {
+            color: $ucla-gold;
+            background-color: $ucla-blue;
+          }
+        }
+        li {
+            float: left;
+            display: inline;
+            font-family: $light-sans-serif;
+            letter-spacing: .05em;
+            font-size: 14px;
+            text-transform: uppercase;
+            line-height: 21px;
+        }
+    }
+}
+.container > .navbar-header {
+    width: 100%;
+    margin-top: 66px;
+    margin-right: 0;
+    background: $ucla-blue;
+    .logo {
+        position: relative;
+        left: 0;
+        top: -73px;
+        margin-left: -35px;
+        padding: 10px 0;
+        height: auto;
+        width: auto;
+        z-index: 999;
+    }
+}
+.lcc-loc {
+    position: relative;
+    bottom: -33px;
+    left: 10px;
+    height: 20px;
+    font-size: 14px;
+    font-family: $sans-serif;
+    text-transform: uppercase;
+    letter-spacing: .05em;
+    color: #FFFFFF;
+    a {
+     text-decoration: none;
+     color: #FFFFFF;
+        :hover, :active {
+            color: #FFE800;
+        }
+    }
+}
+@media screen and (max-width: $large-device) {
+    .banner .container {
+        min-height: 150px;
+    }
+    .container > .navbar-header {
+    margin-top: 55px;
+    margin-right: 0;
+        .logo {
+            position: relative;
+            left: 0;
+            top: -63px;
+            margin-left: -35px;
+            padding: 10px 0;
+            height: auto;
+            width: 350px;
+        }
+    }
+    .navbar-brand {
+        height: 35px;
+        }
+    .navbar-default {
+            .navbar-nav {
+                margin-top: -35px;
+                height: 30px;
+                li {
+                    font-size: 12px;
+                    line-height: 15px;
+                }
+                > li > a {
+                    padding-top: 0;
+                    padding-bottom: 0;
+                    height: 35px;
+                    line-height: 36px;
+                 }
+            }
+        }
+    .lcc-loc {
+        font-size: 12px;
+        top: 30px;
+        right: 20px;
+        }
+}
+@media screen and (max-width: $medium-device) {
+    .banner .container {
+        min-height: 120px;
+    }
+    .container > .navbar-header {
+    margin-top: 45px;
+    margin-right: 0;
+        .logo {
+            position: relative;
+            left: 0;
+            top: -56px;
+            margin-left: -30px;
+            padding: 10px 0;
+            height: auto;
+            width: 275px;
+        }
+    }
+    .navbar-brand {
+        height: 30px;
+        }
+    .navbar-default {
+            .navbar-nav {
+                margin-top: -30px;
+                height: 20px;
+                li {
+                    font-size: 10px;
+                    line-height: 15px;
+                }
+                > li > a {
+                    padding-top: 0;
+                    padding-bottom: 0;
+                    padding-right: 10px;
+                    padding-left: 10px;
+                    height: 30px;
+                    line-height: 32px;
+                 }
+            }
+        }
+    .lcc-loc {
+        font-size: 10px;
+        top: 17px;
+        right: 10px;
+        }
+}
+@media screen and (max-width: $small-device) {
+    .lcc-loc  {display: none;}
+    .banner .container {height: auto; min-height: auto;}
+    .container>.navbar-header {margin-top: 0; background: transparent;}
+    .navbar-brand {padding: 0;}
+    .navbar-collapse.collapse.in {display: block!important;}
+    .navbar-brand, .navbar-default .navbar-nav {
+        height: auto;
+        margin-top: 0;
+        li {
+            clear:both;
+            display:block;
+            width: 100%;
+            margin-left: -15px;
+            margin-right: - 15px;
+        }
+    }
+    .navbar-toggle {margin-top: 35px;}
+    .container > .navbar-header {
+    width: auto;
+    margin: 0;
+    padding: 0;
+     .logo {
+        position: static;
+        float: left;
+        margin-left: -20px;
+        width: 250px;
+        }
+    }
+}

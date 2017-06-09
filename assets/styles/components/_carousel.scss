@@ -1,0 +1,77 @@
+#carousel-example-generic {
+     margin-bottom: 30px;
+/* LK Styles */
+/* Fade transition for carousel items */
+.carousel .item {
+    left: 0 !important;
+      -webkit-transition: opacity 2s; /*adjust timing here */
+         -moz-transition: opacity 2s;
+           -o-transition: opacity 2s;
+              transition: opacity 2s;
+}
+.carousel-control {
+    background-image: none !important; /* remove background gradients on controls */
+}
+
+/* Restyle bootstrap indicators to match Royal Slider look */
+#carousel-mentoring {
+	height: 414px;
+	}
+.carousel-indicators {
+	top: 91.25%;
+    left: 50%;
+    z-index: 15;
+    width: 71.5%;
+    margin-left: -30%;
+    padding-left: 0;
+    list-style: none;
+    text-align: right;
+}
+.carousel-indicators .active {
+	margin: 0;
+	margin-left: 10px;
+    width: 8px;
+    height: 8px;
+    background-color: rgb(255, 255, 255);
+}
+.carousel-indicators li {
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    margin: 0;
+	margin-left: 10px;
+    text-indent: 0px;
+    border-radius: 10px;
+	border: none;
+    cursor: pointer;
+    background-color: #B2B2B2;
+}
+span.fa-chevron-left, span.fa-chevron-right {
+	position: static;
+	display: block;
+	font-size: .75em;
+	vertical-align: middle;
+	line-height: 29px;
+	}
+.carousel-control .fa-chevron-right, .carousel-control .fa-chevron-left {
+	position: static;
+	}
+a.carousel-control.left, a.carousel-control.right {
+	width: 28px;
+	height: 28px;
+	border-radius: 3px;
+	background: rgba(255,255,255,.95);
+	color: rgba(51,51,51,.5);
+	text-shadow: none;
+	background-image: none;
+	position: absolute;
+	top: 90%;
+	z-index: 20;
+	}
+a.carousel-control.left {
+	left: 93%;
+	}
+a.carousel-control.right {
+	left: 96.5%;
+	}
+}

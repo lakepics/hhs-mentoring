@@ -1,0 +1,92 @@
+.main {
+    padding-left: 25px;
+    padding-right: 25px;
+    margin-bottom: 30px;
+    .row, .page-header {
+    padding-left: 20px;
+    padding-right: 20px;
+    }
+   .em-warning {
+       font-family: $italic-sans-serif;
+       font-size: 14px;
+       strong {
+           font-family: $semibold-sans-serif;
+       }
+    }
+}
+.sidebar-primary .main {
+    padding-left: 25px;
+    padding-right: 25px;
+}
+.content {
+    background: rgba(255,255,255,1);
+}
+
+.page-header {
+    border-bottom: none;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+h1 {
+    font-family: $semibold-sans-serif;
+    font-size: 24px;
+    letter-spacing: .025em;
+    text-transform: uppercase;
+    color: $dark-blue;
+}
+h2 {
+    font-family: $semibold-sans-serif;
+    font-size: 18px;
+    letter-spacing: .025em;
+    text-transform: uppercase;
+    color: $dark-blue;
+    margin-top: 0;
+}
+h3 {
+    font-family: $semibold-sans-serif;
+    font-size: 16px;
+    color: $dark-blue;
+}
+p {
+    margin-bottom: 30px;
+ }
+.agenda-day {
+    margin-bottom: 50px;
+    td {
+        padding-bottom: 10px;
+        vertical-align: top;
+    }
+    .time {
+        width: 180px;
+        padding-right: 50px;
+    }
+}
+.page-id-10 {
+    ul {
+        li {
+            span {
+                font-family: $semibold-sans-serif;
+            }
+        }
+    }
+}
+.button-lh {
+    margin-bottom: 10px;
+}
+@media screen and (max-width: $small-device) {
+    .main .row, .main .page-header {
+    padding-left: 0;
+    padding-right: 0;
+    }
+    .agenda-day {
+        td {
+            display: inline-block;
+        }
+        .time {
+            width: 100%;
+            margin-top: 10px;
+            font-family: $semibold-sans-serif;
+        }
+    }
+}

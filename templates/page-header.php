@@ -1,6 +1,5 @@
 <?php /* use Roots\Sage\Titles; */
 
-$headerImage = the_post_thumbnail('full');
 $heroImage = get_field('heroImage');
 
 
@@ -8,7 +7,7 @@ if (!function_exists('displayHeroImage')) {
     function displayHeroImage() {
         $heroImage = get_field('heroImage');
         if ( is_array($heroImage)) { // we have multiple images so we're doing a slider
-            echo '<div id="carousel-example-generic" class="carousel slide" data-ride="carousel">';
+            echo '<div id="carousel-example-generic" class="carousel carousel-fade" data-ride="carousel" data-interval="3000">';
             echo '<ol class="carousel-indicators">';
             $i = 0;
             foreach ( $heroImage as $indicator ) {
@@ -27,11 +26,10 @@ if (!function_exists('displayHeroImage')) {
                 }
                 $i++;
             }
-            echo '</div><a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev"><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span><span class="sr-only">Previous</span></a><a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next"><span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span><span class="sr-only">Next</span></a></div>';
+            echo '</div><a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev"><span class="fa fa-chevron-left" aria-hidden="true"></span><span class="sr-only">Previous</span></a><a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next"><span class="fa fa-chevron-right" aria-hidden="true"></span><span class="sr-only">Next</span></a></div>';
         }
-        elseif ( isset($headerImage) ) { // we have at least one image set so we go jumbotron
-            echo '<div class="jumbotron"><img src="' . $headerImage . '"></div>';
-
+        else {
+            echo '<div class="row"><div class="col-xs-12"><img src="' . the_post_thumbnail('full' , array( 'class' => 'img-responsive' ) ) . '"></div></div>';
         }
     }
 }

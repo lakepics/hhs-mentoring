@@ -1,0 +1,116 @@
+// Search form
+.search-form {
+  @extend .form-inline;
+}
+.search-form label {
+  font-weight: normal;
+  @extend .form-group;
+}
+.search-form .search-field {
+  @extend .form-control;
+}
+.search-form .search-submit {
+  @extend .btn;
+  @extend .btn-default;
+}
+
+/**
+ * @description Gravity Forms SASS overides inconjunction with Jay Hoffmann's add_bootstrap_container_class
+ *
+ * @author Jay Hoffmann (modified by Josh Cranwell)
+ *
+ * @source https://jayhoffmann.com/using-gravity-forms-bootstrap-styles/
+ *
+ * @instructions
+ *  - Gravity Form settings: HTML 5 [true], CSS OUTPUT [false].
+ *  - Repsonsive column classes must be added to each field in the admin to control inputs .col-[screen-size]-[column-count]
+ *  - If all your inputs are the same width then you can @extend .col-xs-12 below line 20.
+ */
+
+/*.gform_fields {
+  @extend .list-unstyled;
+  @extend .row;
+
+  INPUT, SELECT, TEXTAREA {
+    @extend .form-control;
+    // @extend .col-xs-12;
+
+  }
+
+  TEXTAREA {
+    height: auto;
+
+  }
+
+}
+
+.gfield_description {
+  @extend .alert;
+
+}
+
+.validation_error {
+  @extend .alert;
+  @extend .alert-danger;
+
+}
+
+.validation_message {
+  @extend .alert;
+  @extend .alert-success;
+
+}
+
+.gform_button {
+  @extend .btn;
+
+}
+
+.gfield_required {
+  color: $alert-danger-text;
+
+}
+
+.gform_wrapper UL.gfield_radio li {
+  @extend .radio;
+
+}
+
+.gform_wrapper UL.gfield_checkbox li {
+  @extend .checkbox;
+
+}
+
+.gform_validation_container {
+  display: none;
+
+}
+
+.gfield_error .ginput_container {
+  margin: { bottom: 10px; }
+
+} */
+
+.gform_wrapper .gform_footer input.button, .gform_wrapper .gform_footer input[type=submit] {
+    padding: 10px 16px;
+    font-size: 18px;
+    line-height: 1.3333333;
+    text-transform: uppercase;
+    color: rgb(255, 255, 255);
+    background-color: rgb(50, 132, 191);
+    border-color: rgb(45, 118, 171);
+    display: inline-block;
+    margin-bottom: 0;
+    font-weight: 400;
+    text-align: center;
+    vertical-align: middle;
+    touch-action: manipulation;
+    cursor: pointer;
+    background-image: none;
+    border: 1px solid rgba(0, 0, 0, 0);
+    white-space: nowrap;
+}
+
+gform_wrapper_2 > span.gfield_required {
+    display: none;
+}
